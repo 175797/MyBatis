@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：名称空间-->
+<mapper namespace="cn.itcast.mapper.UserMapper">
+<!--id：指对应sql语句的唯一标识，resultType：返回值类型-->
+    <select id="selectAll" resultType="user">
+        select * from user;
+    </select>
+    <select id="selectById" resultType="user">
+        select * from user where id = #{id};
+    </select>
+</mapper>
